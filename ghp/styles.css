@@ -1,0 +1,71 @@
+:root {
+  --c1: #525559;
+}
+html  { background-color: darkgrey; }
+header  {}
+body  { font: 14px "fira sans", sans-serif; max-width: 60rem; background-color: white; margin: 0rem auto; padding: 0 1rem; border: 2px solid silver; line-height: 1.4rem; }
+footer  { display: flex; justify-content: space-between; margin: 1rem; padding: 0.5rem 3rem; text-align: center;}
+
+nav ul  { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; /*! background-color: maroon; */}
+nav ul li  { padding: 0; margin: 0 0.2ex;}
+nav ul li a  { text-decoration: underline; color: darkblue; font-weight: bold; }
+nav ul li:has(> ul):before { content: '> '; }
+nav ul li:last-child  { margin-right: 0; /* Remove margin from last item */ }
+nav.toc>ul  { list-style: none; margin: 1rem; padding: 0; display: block; flex-wrap: wrap; }
+nav.toc>ul>li  { position: relative; padding: 0; border: 1px solid white; margin: 0; }
+nav.toc>ul>li:hover>ul  { display: block; margin: 0 0 0 0.5rem; padding: 0; /* Show submenu on hover */ }
+nav.toc>ul>li>ul   { display: none; }
+nav.toc>ul>li>ul>li   { border-top: 1px solid white; padding: 0; margin: 0;}
+nav>ul>li:before { content: '> '; }
+nav>ul>li>ul>li:before { content: '> '; }
+
+h1  { font-size: 1.6rem; text-transform: uppercase; display: flex; align-items: center; color: var(--c1); }
+h1+ul  { display: inline; padding: 0; }
+h1+ul > li  { display: inline; padding: 0 1rem; }
+h1::after  { content: ''; flex: 1; margin-left: 0.5rem; height: 0.1rem; }
+h1::before { content: ''; flex: 1; margin-right: 0.5rem; height: 0.1rem; color: var(--c1); }
+h2  { font-size: 1.5rem; text-transform: capitalize; display: flex; align-items: center; padding: 1.5rem 0; text-decoration: underline; text-decoration-style: double; text-underline-offset: 0.5rem; border-top: 0.2rem  solid var(--c1); color: var(--c1); }
+h2::after  { content: ''; flex: 1; margin-left: 1rem; height: 0.1rem; color: var(--c1); }
+h2::before { padding-right: 0.5rem; }
+h3  { line-height: 1rem; font-size: 1.4rem; text-decoration: underline; text-decoration-style: line; text-underline-offset: 0.5rem; padding: 0.5rem 0; color: var(--c1); }
+h3::before { padding-right: 0.5rem;} 
+h4  { font-size: 1.3rem; text-decoration: underline; text-decoration-style: dashed; text-underline-offset: 0.5rem; padding-top: 0.5rem; color: var(--c1); }
+h4::before { padding-right: 0.5rem;}
+h5  { font-size: 1.2rem; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 0.5rem; padding-top: 0.5rem; color: var(--c1); }
+h5::before { padding-right: 0.5rem;}
+h6  { font-size: 1.1rem; text-decoration: none; text-decoration-style: dotted; text-underline-offset: 0.5rem; color: var(--c1); }
+h6::before { padding-right: 0.5rem;}
+
+a  { text-decoration: underline; color: darkblue; }
+a:not([href])  { color: var(--c1); }
+a>img  {border: 2px solid blue;}
+blockquote  { border-left: 0.2rem solid var(--c1); margin: 0rem; padding: 0.5rem; color: var(--c1)}
+blockquote p  { margin: 0; padding: 0;}
+code  { font-family: Menlo, Consolas, Monaco, "Courier New", Courier, monospace; font-weight: bold; color: var(--c1);  }
+details  { border: 0.1rem solid var(--c1); border-radius: 1rem; }
+details > * { margin-left: 1rem; }
+details summary { margin-left: 0; padding: 0.1rem 1rem; border-radius: 1rem; }
+em  { background-color: wheat; padding: 0.1rem 0.3rem; font-style: normal; }
+img  { margin: 0; padding: 0.5rem; max-height: 20rem; max-width: 100%; }
+img.emoji, img.ico  { vertical-align: middle; width: 1.3rem; height: 1.3rem; padding: 0rem; }
+input.task-list-item-checkbox  { margin-right: 0.5rem}
+li ul { margin: 0; }
+p  { margin-bottom: 0;}
+pre { padding: 0.5rem; }
+pre.highlight code { padding: 0; color: white;}
+section  { padding: 0.5rem 0 1rem 0; /*! border-bottom: 1px solid black; */}
+section.header  { margin-bottom: 1rem; padding: 0.5rem; border: 1px solid black; border-radius: 1rem;}
+strong  { background-color: pink; padding: 0.1rem 0.3rem; font-weight: bolder; }
+table  { border-collapse: collapse; }
+td  { border: 1px solid black; padding: 0.5rem; vertical-align: top;  }
+ul  { margin: 0; padding: 0 1rem;}
+
+@media (min-width:800px)  { p > img:active, details > img:active  {
+    background-color: rgba(0,0,0,0.85); margin: 0; padding: 0; z-index: 999;
+    top: 0; right: 0; bottom: 0; left: 0; height: 100%; width: 100%; max-height:
+    100%; max-width: 100%; object-fit: contain; position: fixed; 
+}}
+
+@media (max-width: 1200px) { img { width: 32%; } }
+@media (max-width: 800px) { img { width: 48%; } div.gallery img { width: 48%; } }
+@media (max-width: 500px) { img { width: 100%; } div.gallery img { width: 100%; } }
