@@ -1,6 +1,6 @@
 ---
-title: Bikuluki - Home
 ---
+# Bikuluki - Home
 <!-- Make sure to git config user.name && user.email -->
 
 - [SWTOR](/swtor)
