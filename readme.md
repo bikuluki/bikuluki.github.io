@@ -14,7 +14,7 @@ alias gbiku='ggit_biku'
 function ggit_biku() {
   git init 
   git config user.name "bikuluki" 
-  git config user.email "138936383+bikuluki@users.noreply.github.com"
+  git config user.email XXX
   git remote add origin "git@biku:bikuluki/$(basename $(pwd))" 
 
   mkdir -p assets/css && echo '* mkdir -p assets/css'
