@@ -13,4 +13,4 @@ permissions:
 
 jobs:
   deploy:
-    uses: bikuluki/ghp/.github/workflows/ghp.yml@main
+    uses: xrxfxt/ghp/.github/workflows/ghp.yml@main
